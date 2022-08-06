@@ -1,0 +1,31 @@
+@import '../utils/_mixins.scss';
+.header {
+  .wrapper {
+    @include flex(space-between, center);
+  }
+  .logo {
+    width: 83.33px;
+    height: 50px;
+    object-fit: contain;
+  }
+}
+@include responsive(md) {
+  .header {
+    .logo__wrapper {
+      @include flex(center, center, 0 30px);
+    }
+    .logo {
+      width: 91.66px;
+      height: 55px;
+    }
+  }
+}
+@include responsive(xl) {
+  .header {
+    .logo {
+      width: 100px;
+      height: 60px;
+      cursor: pointer;
+    }
+  }
+}

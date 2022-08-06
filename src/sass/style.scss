@@ -1,0 +1,25 @@
+@import './utils/_mixins';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  user-select: none;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: default;
+}
+.container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@include responsive(md) {
+  .container {
+    padding: 0 30px;
+  }
+}

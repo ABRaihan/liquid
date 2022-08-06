@@ -1,0 +1,7 @@
+%common__button {
+  border: none;
+  background: none;
+  &:focus {
+    outline: none;
+  }
+}

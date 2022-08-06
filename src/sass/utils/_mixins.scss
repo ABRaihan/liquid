@@ -1,0 +1,42 @@
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == md) {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if($breakpoint == lg) {
+    @media screen and (min-width: 1025px) {
+      @content;
+    }
+  } @else if($breakpoint == xl) {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+@mixin flex($justify: _, $align: _, $gap: _, $direction: _) {
+  display: flex;
+  @if ($justify != _) {
+    justify-content: $justify;
+  }
+  @if ($align != _) {
+    align-items: $align;
+  }
+  @if ($gap != _) {
+    gap: $gap;
+  }
+  @if ($direction != _) {
+    flex-direction: $direction;
+  }
+}
+@mixin font($size: _, $weight: _, $color: _) {
+  display: flex;
+  @if ($size != _) {
+    font-size: $size;
+  }
+  @if ($weight != _) {
+    font-weight: $weight;
+  }
+  @if ($color != _) {
+    color: $color;
+  }
+}

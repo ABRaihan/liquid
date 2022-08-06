@@ -1,0 +1,26 @@
+@import '../utils/_variables';
+@import '../utils/_mixins';
+.modal {
+  position: fixed;
+  background-color: #{$secondaryColor}7F;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  @include flex(center, center);
+  .wrapper {
+    background-color: #fff;
+    width: 320px;
+    padding: 20px;
+  }
+  .top{
+    @include flex(space-between, center);
+  }
+  .title{
+    @include font(18px, 700, $secondaryColor)
+  }
+  .body{
+    margin-top: 37px;
+  }
+}

@@ -1,0 +1,6 @@
+@import '../utils/_mixins.scss';
+.form {
+  .input__group {
+    @include flex(_, _, 32px 0, column);
+  }
+}

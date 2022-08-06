@@ -1,0 +1,68 @@
+@import '../utils/_mixins.scss';
+@import '../utils/_variables.scss';
+@import '../utils/_button.scss';
+.input__box {
+  position: relative;
+  .label {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    @include font(12px, 600, $secondaryColor);
+    transform: translateY(-50%);
+    transition: all $transitionTime;
+    background-color: #fff;
+    padding: 0 5px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .label__show {
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+  .label__color {
+    color: $primaryColor;
+  }
+  .input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #{$secondaryColor}4c;
+    padding: 12px 10px;
+    @include font(14px, 700, $secondaryColor);
+    transition: all $transitionTime;
+    background: none;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      @include font(12px, 600, #{$secondaryColor}7F);
+    }
+  }
+  .input_border__color {
+    border-color: $primaryColor;
+  }
+  .button {
+    @extend %common__button;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    @include flex();
+    transform: translateY(-50%);
+    overflow: hidden;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      right: 0;
+      width: 18px;
+      height: 2px;
+      background-color: $secondaryColor;
+      transform: rotate(-45deg) translate(21px, 1px);
+      transition: all $transitionTime;
+    }
+  }
+  .password__show:after {
+    transform: rotate(-45deg) translate(1px, 1px);
+    transition: all $transitionTime;
+  }
+}

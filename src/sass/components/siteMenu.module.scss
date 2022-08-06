@@ -1,0 +1,32 @@
+@import '../utils/_mixins.scss';
+@import '../utils/_variables.scss';
+.menu {
+  @include flex(center, center, 0 20px);
+  .menu__item:not(:first-child) {
+    display: none;
+  }
+  .item__link {
+    display: block;
+  }
+}
+@include responsive(md) {
+  .menu {
+    .menu__item:not(:first-child) {
+      display: block;
+    }
+    .item__link {
+      position: relative;
+      padding: 5px;
+    }
+    .active__menu path {
+      fill: $primaryColor;
+    }
+  }
+}
+@include responsive(lg) {
+  .menu {
+    .menu__item:first-child {
+      display: none;
+    }
+  }
+}
