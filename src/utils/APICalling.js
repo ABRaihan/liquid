@@ -1,8 +1,9 @@
 import { isEmptyObject } from './checkerFunc';
 
-export const API_BASE_URL = 'http://api.soppiya.com/v2.1/widget';
-// export const BUSINESS_ID = "6182120a2d43d472f32eebc7" // nawabzada;
-export const BUSINESS_ID = '618204df2d43d472f32ed77a';
+export const API_BASE_URL = 'http://api.soppiya.com/v2.1';
+// furnish theme businessID
+export const BUSINESS_ID = '62afdaa923d7c7689d2706b7';
+// export const BUSINESS_ID = '618204df2d43d472f32ed77a';
 export const IMG_BASE_URL = `https://www.soppiya.com/media/images/${BUSINESS_ID}`;
 export async function getData(url, token) {
   try {

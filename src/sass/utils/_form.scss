@@ -1,0 +1,9 @@
+@import '../utils/_mixins.scss';
+@import '../utils/_variables.scss';
+%form_footer__text {
+  @include font(14px, 500, #{$secondaryColor}7F);
+  text-align: center;
+  @include responsive(xl) {
+    cursor: pointer;
+  }
+}

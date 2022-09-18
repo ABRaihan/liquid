@@ -1,0 +1,92 @@
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
+
+.wrapper {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 290px;
+  height: calc(100% - 59px);
+  background-color: #ffffff;
+  padding: 30px;
+  overflow-y: auto;
+  transition: all $transitionTime;
+  z-index: 1;
+  .close__icon {
+    display: none;
+  }
+  .list__wrapper {
+    height: calc(100% - 130px);
+    overflow-y: auto;
+  }
+  .category,
+  .list__wrapper {
+    margin-bottom: 43px;
+  }
+  .category__list {
+    max-height: 440px;
+    overflow-y: auto;
+  }
+  .category__title,
+  .pages__title,
+  .social__title {
+    @include font(16px, bold, $secondaryColor);
+    margin-bottom: 31px;
+  }
+  .category_item__link,
+  .page_item__link {
+    @include font(14px, 500, $secondaryColor);
+    margin-bottom: 15px;
+  }
+  .category__item:not(:last-child),
+  .pages__item:not(:last-child) {
+    margin-bottom: 31px;
+  }
+  .social__list {
+    @include flex(_, _, 10px 32px);
+    flex-wrap: wrap;
+    max-height: 135px;
+    overflow-y: hidden;
+  }
+  .social__list:hover {
+    overflow-y: auto;
+  }
+  .overlay {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: calc(100vw - 290px);
+    height: calc(100% - 60px);
+    background-color: #{$secondaryColor}66;
+    transition: right $transitionTime;
+  }
+  .overlay__show {
+    right: 0;
+  }
+}
+@include responsive(md){
+  .wrapper{
+    width: 340px;
+    height: 100vh;
+    .close__icon{
+      position: fixed;
+      top: 0;
+      width: 265px;
+      height: 48px;
+      display: flex;
+      align-items: flex-end;
+      background-color: #ffffff;
+    }
+    .list__wrapper{
+      margin-top: 67px;
+      height: calc(100% - 190px);
+    }
+    .overlay{
+      width: calc(100vw - 340px);
+      height: 100vh;
+    }
+  }
+}
+.show {
+  left: 0;
+}

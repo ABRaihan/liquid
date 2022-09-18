@@ -1,7 +1,16 @@
-export const states = {
-  searchBarAnimation: '',
-  count: 0,
+const formState = {
+  email: '',
+  password: '',
+  confirmPass: '',
 };
-export const animatedStates = {
-  searchBarAnimation: '',
+const userState = {
+  isLogged: false,
 };
+
+// combine all states into one object
+const rootState = {
+  authIsOpen: false,
+  formState,
+  userState,
+};
+export default rootState;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { primaryColor, secondaryColor } from './utils/colors';
 
 const Counter = styled.span`
   position: absolute;
@@ -7,10 +8,10 @@ const Counter = styled.span`
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #ffc312;
+  background-color: ${primaryColor};
   font-size: 11px;
   font-weight: 700;
-  color: #1e272e;
+  color: ${secondaryColor};
   display: flex;
   justify-content: center;
   align-items: center;

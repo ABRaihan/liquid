@@ -1,6 +1,6 @@
-@import '../utils/_mixins.scss';
-@import '../utils/_variables.scss';
-@import '../utils/_button.scss';
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
+@import '../../utils/_button.scss';
 .input__box {
   position: relative;
   .label {
@@ -64,5 +64,12 @@
   .password__show:after {
     transform: rotate(-45deg) translate(1px, 1px);
     transition: all $transitionTime;
+  }
+}
+@include responsive(lg) {
+  .input__box {
+    .button {
+      cursor: pointer;
+    }
   }
 }

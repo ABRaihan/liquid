@@ -1,3 +1,2 @@
-export const combineReducers = (...reducers) => (state, action) => reducers.reduce((acc, nextReducer) => nextReducer(acc, action), state);
-
-export const combineActions = (...actions) => actions.reduce((acc, nextAction) => ({ ...acc(), ...nextAction() }));
+const combineReducers = (...reducers) => (state, action) => reducers.reduce((acc, nextReducer) => nextReducer(acc, action), state);
+export default combineReducers;

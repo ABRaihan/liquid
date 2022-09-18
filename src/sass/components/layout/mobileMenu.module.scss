@@ -1,0 +1,88 @@
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
+.navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  @include flex(center, center);
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgb(30 39 46 / 10%);
+  z-index: 2;
+  .menu {
+    position: relative;
+    @include flex();
+    width: 100%;
+    max-width: 360px;
+  }
+  .menu__list {
+    @include flex(center, center);
+    width: 20%;
+    height: 60px;
+    z-index: 1;
+  }
+  .menu__link {
+    @include flex(center, center);
+    height: 100%;
+    width: 100%;
+    transition: all $transitionTime;
+  }
+  .menu__icon {
+    display: block;
+    width: 55px;
+    height: 55px;
+    // padding-bottom: calc(100% - 17px);
+    text-align: center;
+    line-height: 65px;
+    border-radius: 50%;
+    transition: all $transitionTime;
+  }
+  .active .menu__icon {
+    background-color: $primaryColor;
+    transform: translateY(-27px);
+  }
+  .indicator {
+    position: absolute;
+    top: -35px;
+    width: 20%;
+    padding-bottom: 20%;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all $transitionTime;
+    box-shadow: 0 -4px 10px rgb(30 39 46 / 7%), 0 -15px 15px #ffffff inset;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: -28px;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: 15px 18px #ffffff;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: -28px;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: -15px 18px #ffffff;
+    }
+  }
+  .menu__list:nth-child(2).active ~ .indicator {
+    transform: translateX(100% * 1);
+  }
+  .menu__list:nth-child(3).active ~ .indicator {
+    transform: translateX(100% * 2);
+  }
+  .menu__list:nth-child(4).active ~ .indicator {
+    transform: translateX(100% * 3);
+  }
+  .menu__list:nth-child(5).active ~ .indicator {
+    transform: translateX(100% * 4);
+  }
+}

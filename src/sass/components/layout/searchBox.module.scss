@@ -1,0 +1,46 @@
+@import '../../utils/_variables.scss';
+@import '../../utils/_mixins.scss';
+.wrapper {
+  position: fixed;
+  top: 10px;
+  right: -100%;
+  visibility: hidden;
+  opacity: 0;
+  width: calc(100% - 30px);
+  transition: all $transitionTime;
+  .hide__area {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+  }
+}
+.show {
+  right: 15px;
+  visibility: visible;
+  opacity: 1;
+}
+@include responsive(md) {
+  .wrapper {
+    top: 100px;
+    right: 30px;
+    width: calc(100% - 60px);
+  }
+  .show {
+    top: 83px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@include responsive(lg) {
+  .wrapper {
+    position: relative;
+    right: 0;
+    top: 0px;
+    opacity: 1;
+    visibility: visible;
+    max-width: 640px;
+  }
+}

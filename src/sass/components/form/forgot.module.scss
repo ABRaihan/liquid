@@ -1,0 +1,13 @@
+@import '../../utils/_form.scss';
+@import '../../utils/_variables.scss';
+.form {
+  .input__group {
+    margin-bottom: 25px;
+  }
+  .footer__text {
+    @extend %form_footer__text;
+    span {
+      color: $secondaryColor;
+    }
+  }
+}

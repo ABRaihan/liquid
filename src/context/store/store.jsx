@@ -1,30 +1,26 @@
-import PropTypes from 'prop-types';
-import { createContext, useReducer } from 'react';
-import { combineReducers } from '../../utils/combine';
-import { createActions } from '../actions/actions';
-import { createAnimationActions } from '../actions/animationActions';
-import animationReducer from '../reducer/animationReducer';
+import React, { createContext, useMemo, useReducer } from 'react';
+import combineReducers from '../../utils/combine';
+import { createRootActions } from '../actions/rootActions';
 import rootReducer from '../reducer/rootReducer';
-import { animatedStates, states } from './storeData';
+import rootState from './storeData';
 
-const Context = createContext();
-const { Provider } = Context;
+const StoreContext = createContext();
+const DispatchContext = createContext();
 
 function ContextProvider({ children }) {
-  const reducers = combineReducers(animationReducer, rootReducer);
-
-  const [state, dispatch] = useReducer(reducers, {
-    ...states,
-    ...animatedStates,
-  });
-  const actions = {
-    ...createAnimationActions(dispatch),
-    ...createActions(dispatch),
-  };
-  return <Provider value={{ state, actions }}>{children}</Provider>;
+  const reducers = combineReducers(rootReducer);
+  const [state, dispatch] = useReducer(reducers, rootState);
+  const store = useMemo(() => state, [state]);
+  const actions = useMemo(
+    () => ({
+      ...createRootActions(dispatch),
+    }),
+    [dispatch],
+  );
+  return (
+    <DispatchContext.Provider value={actions}>
+      <StoreContext.Provider value={store}>{children}</StoreContext.Provider>
+    </DispatchContext.Provider>
+  );
 }
-export { ContextProvider as default, Context };
-
-ContextProvider.propTypes = {
-  children: PropTypes.object.isRequired,
-};
+export { ContextProvider as default, StoreContext, DispatchContext };

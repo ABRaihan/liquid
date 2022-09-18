@@ -1,5 +1,5 @@
-@import '../utils/_mixins.scss';
-@import '../utils/_variables.scss';
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
 .menu {
   @include flex(center, center, 0 20px);
   .menu__item:not(:first-child) {

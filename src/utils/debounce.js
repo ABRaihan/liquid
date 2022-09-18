@@ -1,10 +1,8 @@
-const debounce = (fn, delay) => {
-  let timeout;
-  return (event) => {
-    if (timeout) {
-      clearTimeout(timeout);
-    }
-    timeout = setTimeout(() => fn(event), delay);
-  };
+let timeout;
+const fetchDebounce = (fn, delay) => {
+  if (timeout) {
+    clearTimeout(timeout);
+  }
+  timeout = setTimeout(() => fn(), delay);
 };
-export default debounce;
+export default fetchDebounce;

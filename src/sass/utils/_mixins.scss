@@ -1,3 +1,4 @@
+// handle responsive
 @mixin responsive($breakpoint) {
   @if ($breakpoint == md) {
     @media screen and (min-width: 768px) {
@@ -13,6 +14,7 @@
     }
   }
 }
+// handle flex style
 @mixin flex($justify: _, $align: _, $gap: _, $direction: _) {
   display: flex;
   @if ($justify != _) {
@@ -28,8 +30,8 @@
     flex-direction: $direction;
   }
 }
+// handle font style
 @mixin font($size: _, $weight: _, $color: _) {
-  display: flex;
   @if ($size != _) {
     font-size: $size;
   }

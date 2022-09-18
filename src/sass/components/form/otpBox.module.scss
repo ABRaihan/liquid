@@ -1,0 +1,15 @@
+@import '../../utils/_variables.scss';
+.otp__box {
+  display: flex;
+  justify-content: center;
+  gap: 0 15px;
+  .otp__input {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #{$secondaryColor}4c;
+    text-align: center;
+    &:focus {
+      outline: none;
+    }
+  }
+}

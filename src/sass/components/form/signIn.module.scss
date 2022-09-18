@@ -1,0 +1,18 @@
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
+@import '../../utils/_form.scss';
+.form {
+  .input__group {
+    @include flex(_, _, 32px 0, column);
+  }
+  .forgot__pass {
+    margin: 10px 0 25px;
+    @include font(14px, 500, $secondaryColor);
+  }
+  .footer__text {
+    @extend %form_footer__text;
+    span {
+      color: $secondaryColor;
+    }
+  }
+}
