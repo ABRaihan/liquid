@@ -8,14 +8,6 @@
   opacity: 0;
   width: calc(100% - 30px);
   transition: all $transitionTime;
-  .hide__area {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    z-index: -1;
-  }
 }
 .show {
   right: 15px;

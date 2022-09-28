@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import AccountIcon from '../../assets/icon/AccountIcon';
 import CartIcon from '../../assets/icon/CartIcon';
@@ -8,16 +7,15 @@ import WishlistIcon from '../../assets/icon/WishlistIcon';
 import style from '../../sass/components/layout/mobileMenu.module.scss';
 import classNames from '../../utils/classNames';
 
-function MobileMenu({ handleSidebarToggle, handleSideBarHide }) {
+function MobileMenu({ isShowSidebar, handleSidebarToggle, handleSideBarHide }) {
   const { pathname } = useLocation();
-  const [isShowSideBar, setIsShowSideBar] = useState(false);
   const path = ['/', '/cart', '/wishlist', '/account'];
   return (
     <nav className={style.navigation}>
       <ul className={style.menu}>
         <li className={style.menu__list}>
           <Hamburger
-            isClose={isShowSideBar}
+            isClose={isShowSidebar}
             handleClick={handleSidebarToggle}
           />
         </li>

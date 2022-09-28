@@ -5,6 +5,7 @@ function App() {
   return (
     <ContextProvider>
       <Router />
+      {/* <TestHooks /> */}
     </ContextProvider>
   );
 }

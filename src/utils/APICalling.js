@@ -2,8 +2,9 @@ import { isEmptyObject } from './checkerFunc';
 
 export const API_BASE_URL = 'http://api.soppiya.com/v2.1';
 // furnish theme businessID
-export const BUSINESS_ID = '62afdaa923d7c7689d2706b7';
-// export const BUSINESS_ID = '618204df2d43d472f32ed77a';
+// export const BUSINESS_ID = '62afdaa923d7c7689d2706b7';
+// liquid theme business ID
+export const BUSINESS_ID = '618204df2d43d472f32ed77a';
 export const IMG_BASE_URL = `https://www.soppiya.com/media/images/${BUSINESS_ID}`;
 export async function getData(url, token) {
   try {
@@ -15,7 +16,7 @@ export async function getData(url, token) {
     });
     return response.json();
   } catch (error) {
-    console.log(error.message);
+    console.error(error.message);
     return error.message;
   }
 }

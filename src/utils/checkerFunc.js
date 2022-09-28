@@ -4,7 +4,10 @@ export const isEmptyObject = (obj) => (
     && Object.values(obj || {}).filter(Boolean)?.length === 0
 );
 
-export const isEmptyArray = (array) => array.length === 0;
+export const isEmptyArray = (array) => {
+  if (!Array.isArray(array)) return false;
+  return array.length === 0;
+};
 // This is function make a number two decimal places
 export const twoDecimal = (number) => {
   if (typeof number !== 'number') throw new Error('Give a number');

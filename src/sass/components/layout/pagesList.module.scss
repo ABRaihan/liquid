@@ -1,0 +1,11 @@
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
+.list {
+  @include flex(space-between, center);
+  padding: 0 40px;
+  max-width: 613px;
+  flex-grow: 1;
+  &__link {
+    @include font(14px, 500, $secondaryColor);
+  }
+}

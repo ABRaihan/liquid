@@ -1,15 +1,13 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import style from '../../sass/components/layout/searchList.module.scss';
 import { isEmptyArray } from '../../utils/checkerFunc';
 import classNames from '../../utils/classNames';
 
-function SearchList({ list, query, animation, setAnimation, clickHandler }) {
+function SearchList({ list, query, animation, clickHandler }) {
   let liElements;
   if (isEmptyArray(list)) {
     liElements = <li className={style.item__menu}>No Item Found</li>;
-  }
-  if (!isEmptyArray(list)) {
+  } else if (list) {
     liElements = list.map(({ _id, name, slug }) => {
       const regEx = new RegExp(query, 'i');
       const matchValue = name.match(regEx);
@@ -28,9 +26,6 @@ function SearchList({ list, query, animation, setAnimation, clickHandler }) {
       );
     });
   }
-  useEffect(() => {
-    setTimeout(() => setAnimation(true), 300);
-  }, []);
   return (
     <ul
       className={classNames({

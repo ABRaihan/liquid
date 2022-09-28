@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import CloseIcon from '../../assets/icon/CloseIcon';
 import style from '../../sass/components/layout/sidebar.module.scss';
@@ -10,12 +9,8 @@ function Sidebar({
   pages,
   category,
   animation,
-  setAnimation,
   handleClick,
 }) {
-  useEffect(() => {
-    setTimeout(() => setAnimation(true));
-  }, []);
   return (
     <aside
       className={classNames({

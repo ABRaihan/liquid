@@ -1,0 +1,33 @@
+@import '../utils/_mixins.scss';
+@import '../utils/_variables.scss';
+.carousel {
+  position: relative;
+  overflow: hidden;
+  .wrapper {
+    @include flex();
+    transition: all $transitionTime;
+  }
+  .animation {
+    transition: all $transitionTime;
+  }
+  .slider {
+    min-width: 100%;
+    overflow: hidden;
+  }
+  .img {
+    position: relative;
+    height: 100%;
+    width: calc(100% + 35%);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@include responsive(lg) {
+  .carousel {
+    .img {
+      position: static;
+      width: 100%;
+      transform: unset;
+    }
+  }
+}

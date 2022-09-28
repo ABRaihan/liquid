@@ -7,7 +7,6 @@
   user-select: none;
 }
 
-
 ul {
   list-style: none;
 }
@@ -16,16 +15,17 @@ a {
   cursor: default;
 }
 .container {
-  max-width: 1320px;
+  max-width: 1380px;
   padding: 0 15px;
   margin: 0 auto;
 }
+
 @include responsive(md) {
   .container {
     padding: 0 30px;
   }
 }
-@include responsive(xl) {
+@include responsive(lg) {
   a {
     cursor: pointer;
   }

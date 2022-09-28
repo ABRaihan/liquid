@@ -1,0 +1,35 @@
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
+.menu__bar {
+  background-color: #{$secondaryColor}0C;
+  margin-top: 18px;
+  .wrapper {
+    @include flex();
+  }
+  .left__menu {
+    position: relative;
+    @include flex(_, center, 0 15px);
+    max-width: 300px;
+    flex-grow: 1;
+    padding: 15px 25px;
+    background-color: $primaryColor;
+  }
+  .title__text {
+    @include font(14px, 600, $secondaryColor);
+  }
+  .arrow__icon {
+    position: absolute;
+    right: 25px;
+    transition: all $transitionTime;
+  }
+  .rotate {
+    transform: rotate(180deg);
+  }
+}
+@include responsive(lg) {
+  .menu__bar {
+    .left__menu {
+      cursor: pointer;
+    }
+  }
+}

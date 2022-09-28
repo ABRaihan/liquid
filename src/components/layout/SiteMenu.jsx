@@ -14,8 +14,8 @@ import classNames from '../../utils/classNames';
 import Counter from '../styled/Counter';
 
 function SiteMenu({
-  isSearchBoxShow,
-  setIsSearchBoxShow,
+  searchBoxMount,
+  setSearchBoxMount,
   handleSearchBarHide,
 }) {
   const { setSearchBarAnim } = useContext(DispatchContext);
@@ -24,10 +24,10 @@ function SiteMenu({
   const screenWidth = useScreenWidth();
   const [counter] = useState({ cart: 1, wishlist: 1 });
   const handleSearchBarToggle = () => {
-    if (isSearchBoxShow) {
+    if (searchBoxMount) {
       handleSearchBarHide();
     } else {
-      setIsSearchBoxShow(true);
+      setSearchBoxMount(true);
     }
   };
 
@@ -43,7 +43,6 @@ function SiteMenu({
             [style.active__menu]: isActive,
             [style.item__link]: true,
           })}
-          onClick={handleSearchBarHide}
         >
           <WishlistIcon />
           {pathname !== '/wishlist' && counter.wishlist && (
@@ -58,7 +57,6 @@ function SiteMenu({
             [style.active__menu]: isActive,
             [style.item__link]: true,
           })}
-          onClick={handleSearchBarHide}
         >
           <CartIcon />
           {pathname !== '/cart' && counter.cart && (
@@ -73,7 +71,6 @@ function SiteMenu({
             [style.active__menu]: isActive,
             [style.item__link]: true,
           })}
-          onClick={handleSearchBarHide}
         >
           <AccountIcon />
           {pathname !== '/account' && userState.isLogged && (
