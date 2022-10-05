@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { primaryColor, secondaryColor } from './utils/colors';
+import { primaryColor, secondaryColor } from './utils/variables';
 
 const Counter = styled.span`
   position: absolute;

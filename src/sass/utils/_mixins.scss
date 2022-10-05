@@ -30,6 +30,19 @@
     flex-direction: $direction;
   }
 }
+// handle grid style
+@mixin grid($column: _, $row: _, $gap: _) {
+  display: grid;
+  @if ($column != _) {
+    grid-template-columns: $column;
+  }
+  @if ($row != _) {
+    grid-template-rows: $row;
+  }
+  @if ($gap != _) {
+    gap: $gap;
+  }
+}
 // handle font style
 @mixin font($size: _, $weight: _, $color: _) {
   @if ($size != _) {

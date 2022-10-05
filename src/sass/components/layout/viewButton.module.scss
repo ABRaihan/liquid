@@ -1,0 +1,12 @@
+@import '../../utils/_button.scss';
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
+.btn {
+  @extend %common__button;
+  @include font(14px, 500, $secondaryColor);
+  .arrow__icon {
+    margin-left: 10px;
+    display: inline-block;
+    transform: rotate(-90deg);
+  }
+}

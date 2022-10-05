@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { secondaryColor } from './utils/colors';
+import { secondaryColor } from './utils/variables';
 
 const Separator = styled.hr`
     margin: 30px 0 25px;

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { primaryColor, secondaryColor } from './utils/colors';
+import { primaryColor, secondaryColor } from './utils/variables';
 import font from './utils/mixins';
 
 const commonBtn = () => css`
