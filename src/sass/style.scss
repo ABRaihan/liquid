@@ -6,7 +6,9 @@
   font-family: 'Montserrat', sans-serif;
   user-select: none;
 }
-
+body {
+  padding-bottom: 70px;
+}
 ul {
   list-style: none;
 }
@@ -21,6 +23,9 @@ a {
 }
 
 @include responsive(md) {
+  body {
+    padding-bottom: 0;
+  }
   .container {
     padding: 0 30px;
   }

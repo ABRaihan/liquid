@@ -14,12 +14,23 @@
     height: 100%;
     object-fit: cover;
   }
-  .item__name {
+  .item__info {
     margin-top: 10px;
+  }
+  .item__name {
     text-align: center;
   }
   .item__link {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     @include font(14px, 400, $secondaryColor);
+  }
+  .item__price {
+    margin-top: 5px;
+    text-align: center;
+    @include font(14px, 500, $secondaryColor);
   }
 }
 @include responsive(md) {
@@ -30,9 +41,6 @@
     }
     .items {
       @include grid(repeat(4, 1fr), _, 30px 20px);
-    }
-    .item__name {
-      margin-top: 15px;
     }
   }
 }
