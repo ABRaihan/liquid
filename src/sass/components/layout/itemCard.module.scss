@@ -1,0 +1,27 @@
+@import "../../utils/_variables.scss";
+@import "../../utils/_mixins.scss";
+.item {
+  .item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .item__info {
+    margin-top: 10px;
+  }
+  .item__name {
+    text-align: center;
+  }
+  .item__link {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    @include font(14px, 400, $secondaryColor);
+  }
+  .item__price {
+    margin-top: 5px;
+    text-align: center;
+    @include font(14px, 500, $secondaryColor);
+  }
+}

@@ -46,7 +46,7 @@ function CategoryMenu({ categories, pages }) {
               />
             )}
           </div>
-          <PagesList list={pages} />
+          <PagesList pages={pages} design="header" />
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import CloseIcon from '../../assets/icon/CloseIcon';
 import style from '../../sass/components/layout/sidebar.module.scss';
 import { isEmptyArray } from '../../utils/checkerFunc';
 import classNames from '../../utils/classNames';
+import SocialList from './SocialList';
 
 function Sidebar({
   social,
@@ -77,7 +78,8 @@ Sidebar.Pages = ({ pages }) => !isEmptyArray(pages) && (
 Sidebar.Social = ({ social }) => !isEmptyArray(social) && (
 <div className={style.social}>
   <p className={style.social__title}>Get in Touch</p>
-  <ul className={style.social__list}>
+  <SocialList social={social} design="sidebar" />
+  {/* <ul className={style.social__list}>
     {social.map(({ svg, url }) => (
       <li key={Math.random()}>
         <a
@@ -89,6 +91,6 @@ Sidebar.Social = ({ social }) => !isEmptyArray(social) && (
         />
       </li>
     ))}
-  </ul>
+  </ul> */}
 </div>
 );

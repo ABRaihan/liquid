@@ -10,7 +10,7 @@ import SearchBox from '../components/layout/SearchBox';
 import Sidebar from '../components/layout/Sidebar';
 import SiteMenu from '../components/layout/SiteMenu';
 import Authentication from '../components/popup/Authentication';
-import { StoreContext } from '../context/store/store';
+import { DispatchContext, StoreContext } from '../context/store/store';
 import useDelayUnmount from '../hooks/useDelayUnmount';
 // Hooks Files
 import useScreenWidth from '../hooks/useScreenWidth';
@@ -22,7 +22,8 @@ function Header() {
   // custom hooks
   const screenWidth = useScreenWidth();
   // context API hooks
-  const { authIsOpen } = useContext(StoreContext);
+  const { authIsOpen, pages, social } = useContext(StoreContext);
+  const { setSocial, setPages } = useContext(DispatchContext);
   // states hooks
   // search box state
   const [searchBoxMount, setSearchBoxMount] = useState(false);
@@ -34,9 +35,8 @@ function Header() {
   const [isShowSidebar, setIsShowSidebar] = useState(false);
   const [renderSidebar, animationSidebar] = useDelayUnmount(isShowSidebar, 300);
   const [sidebarAnimation, setSidebarAnimation] = useState(false);
-  const [social, setSocial] = useState([]);
+  // const [social, setSocial] = useState([]);
   const [category, setCategory] = useState([]);
-  const [pages, setPages] = useState([]);
 
   // searchbox hide function
   const handleSearchBarHide = () => {

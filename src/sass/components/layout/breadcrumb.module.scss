@@ -1,0 +1,26 @@
+@import '../../utils/_variables.scss';
+@import '../../utils/_mixins.scss';
+.list {
+  @include flex(center, center, 0 10px);
+  .list__link {
+    @include font(13px, 500, #{$secondaryColor}B2);
+  }
+  .list__item svg {
+    width: 8px;
+    transform: rotate(-90deg);
+    & path {
+      fill: #{$secondaryColor}B2;
+    }
+  }
+}
+@include responsive(md){
+    .list{
+        gap: 0 15px;
+        .list__link{
+            @include font(14px, 500, #{$secondaryColor}B2);
+        }
+        .list__item svg{
+            width: 10px;
+        }
+    }
+}

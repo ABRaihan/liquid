@@ -12,5 +12,7 @@ const rootState = {
   authIsOpen: false,
   formState,
   userState,
+  social: [],
+  pages: [],
 };
 export default rootState;

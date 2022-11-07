@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ItemCard from '../components/layout/ItemCard';
 import ViewButton from '../components/layout/ViewButton';
+import ItemsWrapper from '../components/styled/Layout';
 import LayoutTitle from '../components/styled/Typography';
 import style from '../sass/layout/allProduct.module.scss';
-import { getData, IMG_BASE_URL } from '../utils/APICalling';
+import { getData } from '../utils/APICalling';
 
 function AllProduct(props) {
   const [items, setItems] = useState([]);
@@ -19,34 +21,45 @@ function AllProduct(props) {
       <div className="container">
         <div className={style.header}>
           <LayoutTitle>All Products</LayoutTitle>
-          <ViewButton />
+          <Link to="/items">
+            <ViewButton />
+          </Link>
         </div>
-        <div className={style.items}>
+        <ItemsWrapper>
           {items.map(({ _id, name, image, price, slug }) => (
-            <div key={_id} className={style.item}>
-              <div className={style.img__wrapper}>
-                <Link to={`/category${_id}`}>
-                  <img
-                    className={style.item__img}
-                    src={`${IMG_BASE_URL}/item/${_id}/${image}`}
-                    alt={name}
-                  />
-                </Link>
-              </div>
-              <div className={style.item__info}>
-                <p className={style.item__name}>
-                  <Link className={style.item__link} to={`/category${_id}`}>
-                    {name}
-                  </Link>
-                </p>
-                <p className={style.item__price}>
-                  $
-                  {price}
-                </p>
-              </div>
-            </div>
+            <ItemCard
+              key={_id}
+              id={_id}
+              slug={slug}
+              type="item"
+              name={name}
+              image={image}
+              price={price}
+            />
+            // <div key={_id} className={style.item}>
+            //   <div className={style.img__wrapper}>
+            //     <Link to={`/category${_id}`}>
+            //       <img
+            //         className={style.item__img}
+            //         src={`${IMG_BASE_URL}/item/${_id}/${image}`}
+            //         alt={name}
+            //       />
+            //     </Link>
+            //   </div>
+            //   <div className={style.item__info}>
+            //     <p className={style.item__name}>
+            //       <Link className={style.item__link} to={`/category${_id}`}>
+            //         {name}
+            //       </Link>
+            //     </p>
+            //     <p className={style.item__price}>
+            //       $
+            //       {price}
+            //     </p>
+            //   </div>
+            // </div>
           ))}
-        </div>
+        </ItemsWrapper>
       </div>
     </section>
   );

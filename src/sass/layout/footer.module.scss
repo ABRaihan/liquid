@@ -1,0 +1,39 @@
+@import '../utils/_sharable.scss';
+@import '../utils/_variables.scss';
+@import '../utils/_mixins.scss';
+.layout {
+  background-color: #{$secondaryColor}0C;
+  margin-top: 80px;
+  padding: 50px 0 15px;
+  .logo__wrapper {
+    text-align: center;
+    line-height: 0;
+  }
+  .logo {
+    @extend %logo__resize;
+  }
+  .description {
+    @include font(14px, 500, #{$secondaryColor}7F);
+    line-height: 28px;
+    text-align: center;
+    margin: 30px auto 0px;
+    max-width: 646px;
+  }
+  .divider {
+    margin: 60px auto 0;
+    border: 1px solid #{$secondaryColor}33;
+    max-width: 710px;
+  }
+  .copyright{
+    @include font(14px, 400, $secondaryColor);
+    text-align: center;
+    margin-top: 16px;
+  }
+}
+@include responsive(lg) {
+  .layout {
+    .divider {
+      max-width: 800px;
+    }
+  }
+}

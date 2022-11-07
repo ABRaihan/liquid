@@ -1,0 +1,11 @@
+@import "../utils/_mixins.scss";
+%logo__resize {
+  width: 91.66px;
+  height: 55px;
+  object-fit: contain;
+  @include responsive(lg) {
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+  }
+}

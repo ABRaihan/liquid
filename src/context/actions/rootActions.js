@@ -3,8 +3,8 @@ export const rootActions = {
   SET_USER: 'setUser',
   SET_AUTH_IS_OPEN: 'setAuthIsOpen',
   // SET_CATEGORY: 'setCategory',
-  // SET_PAGES: 'setPages',
-  // SET_SOCIAL: 'setSocial',
+  SET_PAGES: 'setPages',
+  SET_SOCIAL: 'setSocial',
 };
 
 export const createRootActions = (dispatch) => ({
@@ -32,16 +32,16 @@ export const createRootActions = (dispatch) => ({
   //     payload: value,
   //   });
   // },
-  // setPages(value) {
-  //   dispatch({
-  //     type: rootActions.SET_PAGES,
-  //     payload: value,
-  //   });
-  // },
-  // setSocial(value) {
-  //   dispatch({
-  //     type: rootActions.SET_SOCIAL,
-  //     payload: value,
-  //   });
-  // },
+  setPages(value) {
+    dispatch({
+      type: rootActions.SET_PAGES,
+      payload: value,
+    });
+  },
+  setSocial(value) {
+    dispatch({
+      type: rootActions.SET_SOCIAL,
+      payload: value,
+    });
+  },
 });

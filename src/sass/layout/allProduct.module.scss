@@ -6,32 +6,6 @@
     @include flex(space-between);
     margin-bottom: 20px;
   }
-  .items {
-    @include grid(repeat(3, 1fr), _, 20px 15px);
-  }
-  .item__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .item__info {
-    margin-top: 10px;
-  }
-  .item__name {
-    text-align: center;
-  }
-  .item__link {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    @include font(14px, 400, $secondaryColor);
-  }
-  .item__price {
-    margin-top: 5px;
-    text-align: center;
-    @include font(14px, 500, $secondaryColor);
-  }
 }
 @include responsive(md) {
   .layout {
@@ -39,16 +13,10 @@
     .header {
       margin-bottom: 25px;
     }
-    .items {
-      @include grid(repeat(4, 1fr), _, 30px 20px);
-    }
   }
 }
 @include responsive(xl) {
   .layout {
     margin-top: 100px;
-    .items {
-      @include grid(repeat(6, 1fr), _, 40px 30px);
-    }
   }
 }

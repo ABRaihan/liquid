@@ -1,0 +1,20 @@
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
+.social__list {
+  flex-wrap: wrap;
+  max-height: 135px;
+  overflow-y: hidden;
+  &:hover {
+    overflow-y: auto;
+  }
+}
+.sidebar {
+  @include flex(_, _, 10px 32px);
+}
+.footer {
+  @include flex(center, _, 10px 32px);
+  margin-top: 30px;
+  svg path {
+    fill: $primaryColor;
+  }
+}

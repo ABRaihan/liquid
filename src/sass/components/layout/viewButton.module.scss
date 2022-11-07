@@ -10,3 +10,8 @@
     transform: rotate(-90deg);
   }
 }
+@include responsive(lg) {
+  .btn {
+    cursor: pointer;
+  }
+}

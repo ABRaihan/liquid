@@ -42,15 +42,15 @@
   .pages__item:not(:last-child) {
     margin-bottom: 31px;
   }
-  .social__list {
-    @include flex(_, _, 10px 32px);
-    flex-wrap: wrap;
-    max-height: 135px;
-    overflow-y: hidden;
-  }
-  .social__list:hover {
-    overflow-y: auto;
-  }
+  // .social__list {
+  //   @include flex(_, _, 10px 32px);
+  //   flex-wrap: wrap;
+  //   max-height: 135px;
+  //   overflow-y: hidden;
+  // }
+  // .social__list:hover {
+  //   overflow-y: auto;
+  // }
   .overlay {
     position: fixed;
     right: -100%;

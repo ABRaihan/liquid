@@ -16,12 +16,12 @@ const rootReducer = (state, { type, payload }) => {
     // case rootActions.SET_CATEGORY: {
     //   return { ...state, category: payload };
     // }
-    // case rootActions.SET_PAGES: {
-    //   return { ...state, pages: payload };
-    // }
-    // case rootActions.SET_SOCIAL: {
-    //   return { ...state, social: payload };
-    // }
+    case rootActions.SET_PAGES: {
+      return { ...state, pages: payload };
+    }
+    case rootActions.SET_SOCIAL: {
+      return { ...state, social: payload };
+    }
     default: {
       return state;
     }

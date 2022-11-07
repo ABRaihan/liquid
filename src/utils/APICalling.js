@@ -4,7 +4,9 @@ export const API_BASE_URL = 'http://api.soppiya.com/v2.1';
 // furnish theme businessID
 // export const BUSINESS_ID = '62afdaa923d7c7689d2706b7';
 // liquid theme business ID
-export const BUSINESS_ID = '618204df2d43d472f32ed77a';
+// export const BUSINESS_ID = '618204df2d43d472f32ed77a';
+// Kishanee business
+export const BUSINESS_ID = '6304a493b7f3a89f71077cd9';
 export const IMG_BASE_URL = `https://www.soppiya.com/media/images/${BUSINESS_ID}`;
 export async function getData(url, token) {
   try {

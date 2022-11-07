@@ -1,10 +1,20 @@
 import { Link } from 'react-router-dom';
 import style from '../../sass/components/layout/pagesList.module.scss';
+import classNames from '../../utils/classNames';
 
-function PagesList({ list }) {
+const styles = {
+  header: style.header,
+  footer: style.footer,
+};
+function PagesList({ pages, design }) {
+  const defaultStyle = styles[design] || styles.header;
   return (
-    <ul className={style.list}>
-      {list?.map(({ _id, slug, title }) => (
+    <ul className={classNames({
+      [style.list]: true,
+      [defaultStyle]: true,
+    })}
+    >
+      {pages?.map(({ _id, slug, title }) => (
         <li className={style.list__item} key={_id}>
           <Link className={style.list__link} to={`/${slug}`}>{title}</Link>
         </li>
