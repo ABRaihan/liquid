@@ -10,6 +10,7 @@ import Account from '../pages/Account';
 import Cart from '../pages/Cart';
 import Category from '../pages/Category';
 import Home from '../pages/Home';
+import Items from '../pages/Items';
 import Wishlist from '../pages/Wishlist';
 
 function Router() {
@@ -26,6 +27,7 @@ function Router() {
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/category" element={<Category />} />
           <Route path="/category/:id" element={<Category />} />
+          <Route path="/items" element={<Items />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
           <Route
             path="/*"
