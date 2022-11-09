@@ -13,3 +13,12 @@ export const twoDecimal = (number) => {
 };
 
 export const isLastElement = (list, index) => list.length - 1 === index;
+export const objectExistInArray = (array, element) => {
+  if (!Array.isArray(array)) throw new Error('Give An Array Element');
+  for (const obj of array) {
+    if (obj.name === element) {
+      return true;
+    }
+  }
+  return false;
+};

@@ -36,6 +36,7 @@
     "no-unneeded-ternary": 0,
     "react/jsx-no-bind": 0,
     "no-promise-executor-return": 0,
-    "jsx-a11y/mouse-events-have-key-events": 0
+    "jsx-a11y/mouse-events-have-key-events": 0,
+    "no-underscore-dangle": 0
   }
 }

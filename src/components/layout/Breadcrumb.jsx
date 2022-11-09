@@ -4,13 +4,19 @@ import ChevronIcon from '../../assets/icon/ChevronIcon';
 import style from '../../sass/components/layout/breadcrumb.module.scss';
 import { isLastElement } from '../../utils/checkerFunc';
 
-function Breadcrumb({ paths, clickHandler }) {
+function Breadcrumb({ paths, handlePathNavigation }) {
   return (
     <ul className={style.list}>
       {paths.map(({ name, path }, index) => (
         <React.Fragment key={Math.random()}>
           <li className={style.list__item}>
-            <Link className={style.list__link} to={path}>{name}</Link>
+            <Link
+              onClick={handlePathNavigation?.bind(null, path)}
+              className={style.list__link}
+              to={path}
+            >
+              {name}
+            </Link>
           </li>
           {!isLastElement(paths, index) && (
             <li className={style.list__item}>

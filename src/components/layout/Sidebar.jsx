@@ -79,18 +79,5 @@ Sidebar.Social = ({ social }) => !isEmptyArray(social) && (
 <div className={style.social}>
   <p className={style.social__title}>Get in Touch</p>
   <SocialList social={social} design="sidebar" />
-  {/* <ul className={style.social__list}>
-    {social.map(({ svg, url }) => (
-      <li key={Math.random()}>
-        <a
-          aria-label="Social Icon"
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          dangerouslySetInnerHTML={{ __html: svg }}
-        />
-      </li>
-    ))}
-  </ul> */}
 </div>
 );

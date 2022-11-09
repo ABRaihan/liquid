@@ -36,28 +36,6 @@ function AllProduct(props) {
               image={image}
               price={price}
             />
-            // <div key={_id} className={style.item}>
-            //   <div className={style.img__wrapper}>
-            //     <Link to={`/category${_id}`}>
-            //       <img
-            //         className={style.item__img}
-            //         src={`${IMG_BASE_URL}/item/${_id}/${image}`}
-            //         alt={name}
-            //       />
-            //     </Link>
-            //   </div>
-            //   <div className={style.item__info}>
-            //     <p className={style.item__name}>
-            //       <Link className={style.item__link} to={`/category${_id}`}>
-            //         {name}
-            //       </Link>
-            //     </p>
-            //     <p className={style.item__price}>
-            //       $
-            //       {price}
-            //     </p>
-            //   </div>
-            // </div>
           ))}
         </ItemsWrapper>
       </div>
