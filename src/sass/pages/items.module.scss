@@ -1,0 +1,10 @@
+@import "../utils/_mixins.scss";
+.items{
+    .product__row{
+        margin-top: 40px;
+    }
+    .filter__btn{
+        @include flex(_, center, 0 10px);
+        margin-left: auto;
+    }
+}

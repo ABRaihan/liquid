@@ -21,7 +21,7 @@ function Footer() {
           imperdiet et leo in vulputate. Sed eleifend lacus eu sapien sagittis
           imperdiet. Etiam tempor mollis augue, ut tincidunt ex interdum eu.
         </p>
-        <SocialList social={social} design="footer" />
+        <SocialList social={social} placement="footer" />
         <PagesList pages={pages} design="footer" />
         <hr className={style.divider} />
         <p className={style.copyright}>&copy; 2022 A. B. Raihan. All rights reserved.</p>

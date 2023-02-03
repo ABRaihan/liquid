@@ -5,8 +5,8 @@ const styles = {
   sidebar: style.sidebar,
   footer: style.footer,
 };
-function SocialList({ social, design }) {
-  const defaultStyle = styles[design] || styles.sidebar;
+function SocialList({ social, placement }) {
+  const defaultStyle = styles[placement] || styles.sidebar;
   return (
     <ul
       className={classNames({

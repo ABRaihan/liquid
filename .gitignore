@@ -8,6 +8,7 @@
 .pnp.js
 package-lock.json
 .vscode
+/.storybook
 
 # testing
 /coverage

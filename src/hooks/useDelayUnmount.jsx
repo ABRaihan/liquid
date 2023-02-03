@@ -19,9 +19,12 @@ function useDelayUnmount(isMounted, delayTime) {
     let timeoutId;
     if (isMounted) {
       timeoutId = setTimeout(() => setAnimation(true));
-    } else {
-      setAnimation(false);
+      return;
     }
+    setAnimation(false);
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [isMounted]);
   return [shouldRender, animation];
 }

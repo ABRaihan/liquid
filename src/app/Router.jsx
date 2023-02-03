@@ -20,23 +20,26 @@ function Router() {
   return (
     <BrowserRouter>
       <Header />
-      {!delay && (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/wishlist" element={<Wishlist />} />
-          <Route path="/category" element={<Category />} />
-          <Route path="/category/:id" element={<Category />} />
-          <Route path="/items" element={<Items />} />
-          <Route path="*" element={<h1>Page Not Found</h1>} />
-          <Route
-            path="/*"
-            element={<PrivateOutlet isLogged={userState.isLogged} />}
-          >
-            <Route path="account" element={<Account />} />
-          </Route>
-        </Routes>
-      )}
+      {/* {!delay && ( */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/category" element={<Category />} />
+        <Route path="/category/:id" element={<Category />} />
+        <Route path="/items" element={<Items />} />
+        <Route path="*" element={<h1>Page Not Found</h1>} />
+        {!delay
+        && (
+        <Route
+          path="/*"
+          element={<PrivateOutlet isLogged={userState.isLogged} />}
+        >
+          <Route path="account" element={<Account />} />
+        </Route>
+        )}
+      </Routes>
+      {/* )} */}
       {screenWidth > 767 && <Footer />}
     </BrowserRouter>
   );

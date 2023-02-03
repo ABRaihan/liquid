@@ -4,7 +4,7 @@ import style from '../sass/layout/carousel.module.scss';
 import { getData, IMG_BASE_URL } from '../utils/APICalling';
 import { isEmptyArray } from '../utils/checkerFunc';
 
-function Carousel({ autostart, timer }) {
+function Carousel({ autostart, timer = 3000 }) {
   // state hooks
   const [images, setImages] = useState([]);
   const [active, setActive] = useState(0);
@@ -46,6 +46,7 @@ function Carousel({ autostart, timer }) {
       return;
     }
     const sliderTime = setTimeout(() => {
+      console.log('hello');
       autostart && (isMouseEnter || handleNextSlide(active));
     }, timer);
     return () => clearTimeout(sliderTime);

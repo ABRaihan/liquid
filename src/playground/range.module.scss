@@ -1,0 +1,59 @@
+@import '../sass/utils/_variables.scss';
+@import '../sass/utils/_mixins.scss';
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  gap: 10px 0;
+  .slider__range {
+    position: relative;
+    width: 212px;
+    height: 7px;
+    background-color: #1e272e19;
+    user-select: none;
+  }
+  .highlight {
+    position: absolute;
+    // width: calc(calc(var(--x-2) - var(--x-1)));
+    // left: var(--x-1);
+    height: 7px;
+    background-color: $primaryColor;
+  }
+  .handle {
+    position: absolute;
+    top: -6.5px;
+    width: 20px;
+    height: 20px;
+    background-color: $primaryColor;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 10px #1e272e33;
+  }
+  .left {
+    // left: var(--x-1);
+    z-index: 1;
+  }
+  .right {
+    // left: var(--x-2);
+  }
+  .minmax__text__wrapper {
+    display: flex;
+    width: 222px;
+    justify-content: space-between;
+  }
+  .minmax__text {
+    font-size: 14px;
+    color: #1e272e;
+    &:last-child {
+      transform: translateX(10px);
+    }
+  }
+}
+@include responsive(lg) {
+  .wrapper {
+    .handle {
+      cursor: pointer;
+    }
+  }
+}

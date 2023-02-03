@@ -9,11 +9,14 @@ import fetchDebounce from '../../utils/debounce';
 import SearchInput from '../form/SearchInput';
 import SearchList from './SearchList';
 
-function SearchBox({ animation, setSearchBoxMount, handleSearchBarHide }) {
+function SearchBox({ animation, setSearchBoxMount }) {
   // custom hooks
   const screenWidth = useScreenWidth();
   const searchBoxRef = useRef(null);
-  useOutsideDetect(searchBoxRef, handleSearchBarHide);
+  useOutsideDetect(searchBoxRef, () => {
+    if (screenWidth > 1024) return;
+    setSearchBoxMount(false);
+  });
   // states hooks
   const [query, setQuery] = useState('');
   const [searchItems, setSearchItems] = useState('');
@@ -35,6 +38,7 @@ function SearchBox({ animation, setSearchBoxMount, handleSearchBarHide }) {
   const handleItemsNavigate = () => {
     if (screenWidth < 1025) {
       setSearchListMount(false);
+      // setSearchBoxMount(false);
       setTimeout(() => setSearchBoxMount(false), 300);
     } else {
       setQuery('');

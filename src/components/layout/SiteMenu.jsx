@@ -16,24 +16,21 @@ import Counter from '../styled/Counter';
 function SiteMenu({
   searchBoxMount,
   setSearchBoxMount,
-  handleSearchBarHide,
 }) {
   const { setSearchBarAnim } = useContext(DispatchContext);
   const { userState } = useContext(StoreContext);
   const { pathname } = useLocation();
   const screenWidth = useScreenWidth();
   const [counter] = useState({ cart: 1, wishlist: 1 });
-  const handleSearchBarToggle = () => {
-    if (searchBoxMount) {
-      handleSearchBarHide();
-    } else {
+  const handleSearchBarShow = () => {
+    if (!searchBoxMount) {
       setSearchBoxMount(true);
     }
   };
 
   return (
     <ul className={style.menu}>
-      <li className={style.menu__item} onClick={handleSearchBarToggle}>
+      <li className={style.menu__item} onClick={handleSearchBarShow}>
         <SearchIcon />
       </li>
       <li className={style.menu__item}>

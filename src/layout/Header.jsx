@@ -8,22 +8,26 @@ import CategoryMenu from '../components/layout/CategoryMenu';
 import MobileMenu from '../components/layout/MobileMenu';
 import SearchBox from '../components/layout/SearchBox';
 import Sidebar from '../components/layout/Sidebar';
+import SideCategoryList from '../components/layout/SideCategoryList';
+import SidePagesList from '../components/layout/SidePagesList';
+import SideSocialList from '../components/layout/SideSocialList';
 import SiteMenu from '../components/layout/SiteMenu';
 import Authentication from '../components/popup/Authentication';
-import { DispatchContext, StoreContext } from '../context/store/store';
+import ListWrapper from '../components/styled/Lists';
+import { StoreContext } from '../context/store/store';
+import useContextResource from '../hooks/useContextResource';
 import useDelayUnmount from '../hooks/useDelayUnmount';
+import useResource from '../hooks/useResource';
 // Hooks Files
 import useScreenWidth from '../hooks/useScreenWidth';
 // Styles Files
 import style from '../sass/layout/header.module.scss';
-import { getData } from '../utils/APICalling';
 
 function Header() {
   // custom hooks
   const screenWidth = useScreenWidth();
   // context API hooks
-  const { authIsOpen, pages, social } = useContext(StoreContext);
-  const { setSocial, setPages } = useContext(DispatchContext);
+  const { authIsOpen } = useContext(StoreContext);
   // states hooks
   // search box state
   const [searchBoxMount, setSearchBoxMount] = useState(false);
@@ -34,15 +38,14 @@ function Header() {
   // sidebar states
   const [isShowSidebar, setIsShowSidebar] = useState(false);
   const [renderSidebar, animationSidebar] = useDelayUnmount(isShowSidebar, 300);
-  const [sidebarAnimation, setSidebarAnimation] = useState(false);
-  // const [social, setSocial] = useState([]);
-  const [category, setCategory] = useState([]);
+  const category = useResource('/widget/header/category');
+  const social = useContextResource(
+    '/widget/header/social',
+    'social',
+    'setSocial',
+  );
+  const pages = useContextResource('/widget/footer/page', 'pages', 'setPages');
 
-  // searchbox hide function
-  const handleSearchBarHide = () => {
-    if (screenWidth > 1024) return;
-    setSearchBoxMount(false);
-  };
   // sidebar show & hide functions
   const handleSidebarToggle = () => {
     setIsShowSidebar((prev) => !prev);
@@ -56,28 +59,6 @@ function Header() {
     }
   }, [screenWidth]);
 
-  // sidebar data fetches
-  // category data fetch
-  useEffect(() => {
-    (async () => {
-      const response = await getData('/widget/header/category');
-      setCategory(response);
-    })();
-  }, []);
-  // pages data fetch
-  useEffect(() => {
-    (async () => {
-      const response = await getData('/widget/footer/page');
-      setPages(response);
-    })();
-  }, []);
-  // social data fetch
-  useEffect(() => {
-    (async () => {
-      const response = await getData('/widget/header/social');
-      setSocial(response);
-    })();
-  }, []);
   return (
     <header className={style.header}>
       <div className="container">
@@ -94,13 +75,11 @@ function Header() {
             <SearchBox
               animation={animationSearchBox}
               setSearchBoxMount={setSearchBoxMount}
-              handleSearchBarHide={handleSearchBarHide}
             />
           )}
           <SiteMenu
             searchBoxMount={searchBoxMount}
             setSearchBoxMount={setSearchBoxMount}
-            handleSearchBarHide={handleSearchBarHide}
           />
         </div>
       </div>
@@ -116,13 +95,13 @@ function Header() {
         />
       )}
       {screenWidth < 1025 && renderSidebar && (
-        <Sidebar
-          animation={animationSidebar}
-          handleClick={handleSidebarToggle}
-          social={social}
-          pages={pages}
-          category={category}
-        />
+        <Sidebar animation={animationSidebar} handleClick={handleSidebarToggle}>
+          <ListWrapper>
+            <SideCategoryList category={category} />
+            <SidePagesList pages={pages} />
+          </ListWrapper>
+          <SideSocialList social={social} />
+        </Sidebar>
       )}
     </header>
   );

@@ -13,44 +13,18 @@
   transition: all $transitionTime;
   z-index: 1;
   .close__icon {
+    position: fixed;
+    top: 0;
+    width: 265px;
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffffff;
     display: none;
   }
-  .list__wrapper {
-    height: calc(100% - 130px);
-    overflow-y: auto;
+  .close_icon__show {
+    display: flex;
   }
-  .category,
-  .list__wrapper {
-    margin-bottom: 43px;
-  }
-  .category__list {
-    max-height: 440px;
-    overflow-y: auto;
-  }
-  .category__title,
-  .pages__title,
-  .social__title {
-    @include font(16px, bold, $secondaryColor);
-    margin-bottom: 31px;
-  }
-  .category_item__link,
-  .page_item__link {
-    @include font(14px, 500, $secondaryColor);
-    margin-bottom: 15px;
-  }
-  .category__item:not(:last-child),
-  .pages__item:not(:last-child) {
-    margin-bottom: 31px;
-  }
-  // .social__list {
-  //   @include flex(_, _, 10px 32px);
-  //   flex-wrap: wrap;
-  //   max-height: 135px;
-  //   overflow-y: hidden;
-  // }
-  // .social__list:hover {
-  //   overflow-y: auto;
-  // }
   .overlay {
     position: fixed;
     right: -100%;
@@ -58,35 +32,27 @@
     width: calc(100vw - 290px);
     height: calc(100% - 60px);
     background-color: #{$secondaryColor}66;
-    transition: right $transitionTime;
+    transition: all $transitionTime;
   }
-  .overlay__show {
-    right: 0;
+  .overlay__right {
+    left: -100%;
   }
 }
-@include responsive(md){
-  .wrapper{
+.sidebar__right {
+  left: unset;
+  right: -100%;
+}
+
+@include responsive(md) {
+  .wrapper {
     width: 340px;
     height: 100vh;
-    .close__icon{
-      position: fixed;
-      top: 0;
-      width: 265px;
-      height: 48px;
+    .close__icon {
       display: flex;
-      align-items: flex-end;
-      background-color: #ffffff;
     }
-    .list__wrapper{
-      margin-top: 67px;
-      height: calc(100% - 190px);
-    }
-    .overlay{
+    .overlay {
       width: calc(100vw - 340px);
       height: 100vh;
     }
   }
-}
-.show {
-  left: 0;
 }

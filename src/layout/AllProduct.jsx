@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ItemCard from '../components/layout/ItemCard';
 import ViewButton from '../components/layout/ViewButton';
 import ItemsWrapper from '../components/styled/Layout';
-import LayoutTitle from '../components/styled/Typography';
+import { LayoutTitle } from '../components/styled/Typography';
 import style from '../sass/layout/allProduct.module.scss';
 import { getData } from '../utils/APICalling';
 

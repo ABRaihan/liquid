@@ -1,0 +1,16 @@
+@import '../../utils/_mixins.scss';
+@import '../../utils/_variables.scss';
+.wrapper {
+  margin-top: 43px;
+  .list {
+    max-height: 440px;
+    overflow-y: auto;
+  }
+  .list__item:not(:last-child) {
+    margin-bottom: 31px;
+  }
+  .item__link {
+    @include font(14px, 500, $secondaryColor);
+    margin-bottom: 15px;
+  }
+}

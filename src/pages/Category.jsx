@@ -5,7 +5,7 @@ import ItemCard from '../components/layout/ItemCard';
 import PageTitle from '../components/layout/PageTitle';
 import Divider from '../components/styled/Divider';
 import ItemsWrapper from '../components/styled/Layout';
-import LayoutTitle from '../components/styled/Typography';
+import { LayoutTitle } from '../components/styled/Typography';
 import useResource from '../hooks/useResource';
 import { isEmptyArray, objectExistInArray } from '../utils/checkerFunc';
 
@@ -25,7 +25,6 @@ function Category() {
       setPaths(initialPaths);
       return;
     }
-
     // remove the forward path
     const sessionArray = JSON.parse(sessionStorage.getItem('breadcrumb'));
     const index = sessionArray.findIndex(({ path }) => path === pathName);
@@ -56,6 +55,10 @@ function Category() {
     }
   }, [category]);
   useEffect(() => {
+    if (!id) {
+      sessionStorage.clear();
+      return;
+    }
     if (sessionStorage.getItem('breadcrumb')) {
       setPaths([
         ...initialPaths,

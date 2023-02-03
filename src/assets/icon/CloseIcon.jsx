@@ -1,30 +1,48 @@
-function CloseIcon() {
+import PropTypes from 'prop-types';
+
+/**
+ *
+ * @param {number} width - Width of the icon
+ * @param {number} height - Height of the icon
+ * @param {func} onClick - Handler for click event
+ * @returns {JSX.Element} - CloseIcon component
+ */
+export default function CloseIcon({ width, height, onClick }) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="15.938"
-      height="15.938"
-      viewBox="0 0 15.938 15.938"
-      id="close__icon"
-    >
-      <g id="Icon" transform="translate(-302.222 -73)">
-        <path
-          id="Shape_2"
-          data-name="Shape 2"
-          d="M1.013.3l18-.605a.9.9,0,0,1,.965.933,1.07,1.07,0,0,1-1.035,1l-18,.605A.9.9,0,0,1-.021,1.3,1.07,1.07,0,0,1,1.013.3Z"
-          transform="translate(302.453 87.342) rotate(-45)"
-          fill="#1e272e"
-        />
-        <path
-          id="Shape_1"
-          data-name="Shape 1"
-          d="M.981.016l18,.605a1.07,1.07,0,0,1,1.035,1,.9.9,0,0,1-.965.933l-18-.605a1.07,1.07,0,0,1-1.035-1A.9.9,0,0,1,.981.016Z"
-          transform="translate(304.017 72.978) rotate(45)"
-          fill="#1e272e"
-        />
-      </g>
-    </svg>
+    <span onClick={onClick}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={width}
+        height={height}
+        viewBox="0 0 15 14.999"
+      >
+        <g id="Cross" transform="translate(-1138.221 -264.222)">
+          <rect
+            id="Shape_2"
+            data-name="Shape 2"
+            width="19.284"
+            height="1.928"
+            rx="0.964"
+            transform="translate(1139.585 264.222) rotate(45)"
+            fill="#1e272e"
+          />
+          <rect
+            id="Shape_1"
+            data-name="Shape 1"
+            width="19.284"
+            height="1.928"
+            rx="0.964"
+            transform="translate(1153.22 265.585) rotate(135)"
+            fill="#1e272e"
+          />
+        </g>
+      </svg>
+    </span>
   );
 }
 
-export default CloseIcon;
+CloseIcon.propTypes = {
+  width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
