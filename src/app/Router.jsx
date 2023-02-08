@@ -12,7 +12,6 @@ import Category from '../pages/Category';
 import Home from '../pages/Home';
 import Items from '../pages/Items';
 import Wishlist from '../pages/Wishlist';
-import Test from '../playground/Test';
 
 function Router() {
   const screenWidth = useScreenWidth();
@@ -21,7 +20,7 @@ function Router() {
   return (
     <BrowserRouter>
       <Header />
-      <Test />
+      {/* <Test /> */}
       {/* {!delay && ( */}
       <Routes>
         <Route path="/" element={<Home />} />

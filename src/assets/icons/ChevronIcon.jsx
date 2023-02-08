@@ -1,10 +1,30 @@
-function ChevronIcon() {
+import PropTypes from 'prop-types';
+
+const chevronDirections = {
+  left: {
+    transform: 'rotate(90deg)',
+  },
+  right: {
+    transform: 'rotate(-90deg)',
+  },
+};
+/**
+ * Chevron Icon For Direction
+ * @param {number} width - Number
+ * @param {number} height - Number
+ * @param {string|Array.<string>} direction - String|Array<String>
+ * @callback onClick
+ * @returns {JSX.Element}
+ */
+export default function ChevronIcon({ width, height, direction, onClick }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="12"
-      height="6.147"
+      width={width}
+      height={height}
       viewBox="0 0 12 6.147"
+      onClick={onClick}
+      style={chevronDirections[direction]}
     >
       <path
         id="Arrow"
@@ -16,4 +36,16 @@ function ChevronIcon() {
   );
 }
 
-export default ChevronIcon;
+ChevronIcon.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+  // direction: PropTypes.oneOfType([PropTypes.oneOf(['left', 'right']), PropTypes.array]),
+  direction: PropTypes.oneOfType([PropTypes.string]),
+  onClick: PropTypes.func,
+};
+ChevronIcon.defaultProps = {
+  width: 12,
+  height: 6.147,
+  direction: 'right',
+  onClick: null,
+};

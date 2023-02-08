@@ -6,9 +6,9 @@ import style from '../../sass/assets/hamburgerIcon.module.scss';
 import classNames from '../../utils/classNames';
 /**
  * hamburger icon for open & close menubar
- * @param {boolean} rotate - toggle menu & close icon
- * @callback onClick - handler for execute
- * @return {JSX.Element} - hamburger svg icon
+ * @param {boolean} rotate
+ * @callback onClick
+ * @return {JSX.Element}
  */
 
 export default function HamburgerIcon({ rotate, onClick }) {
@@ -24,9 +24,10 @@ export default function HamburgerIcon({ rotate, onClick }) {
   );
 }
 HamburgerIcon.propTypes = {
-  rotate: PropTypes.bool.isRequired,
+  rotate: PropTypes.bool,
   onClick: PropTypes.func,
 };
 HamburgerIcon.defaultProps = {
+  rotate: false,
   onClick: null,
 };

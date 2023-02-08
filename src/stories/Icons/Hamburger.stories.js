@@ -5,9 +5,9 @@ export default {
   component: HamburgerIcon,
 };
 
-const HamburgerTemplate = (args) => <HamburgerIcon {...args} />;
+// const HamburgerTemplate = (args) => <HamburgerIcon {...args} />;
 
-export const Hamburger = HamburgerTemplate.bind({});
+export const Hamburger = HamburgerIcon.bind({});
 Hamburger.args = {
   rotate: false,
 };
