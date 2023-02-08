@@ -3,10 +3,10 @@ import React, { useContext, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { DispatchContext, StoreContext } from '../../context/store/store';
 // Assents Files
-import AccountIcon from '../../assets/icon/AccountIcon';
-import CartIcon from '../../assets/icon/CartIcon';
-import SearchIcon from '../../assets/icon/SearchIcon';
-import WishlistIcon from '../../assets/icon/WishlistIcon';
+import AccountIcon from '../../assets/icons/AccountIcon';
+import CartIcon from '../../assets/icons/CartIcon';
+import SearchIcon from '../../assets/icons/SearchIcon';
+import WishlistIcon from '../../assets/icons/WishlistIcon';
 // Styles Files
 import useScreenWidth from '../../hooks/useScreenWidth';
 import style from '../../sass/components/layout/siteMenu.module.scss';

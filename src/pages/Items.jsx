@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import FilterIcon from '../assets/icon/FilterIcon';
+import FilterIcon from '../assets/icons/FilterIcon';
 import Breadcrumb from '../components/layout/Breadcrumb';
 import PageTitle from '../components/layout/PageTitle';
 import ProductFilter from '../components/layout/ProductFilter';

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import ChevronIcon from '../../assets/icon/ChevronIcon';
-import Hamburger from '../../assets/icon/Hamburger';
+import ChevronIcon from '../../assets/icons/ChevronIcon';
+import Hamburger from '../../assets/icons/HamburgerIcon';
 import useDelayUnmount from '../../hooks/useDelayUnmount';
 import style from '../../sass/components/layout/categoryMenu.module.scss';
 import classNames from '../../utils/classNames';

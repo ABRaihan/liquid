@@ -1,7 +1,6 @@
 /* eslint-disable global-require */
 
 import React, { useEffect, useState } from 'react';
-import Calculator from '../playground/Calculator';
 
 // import Input from '../components/form/Input';
 const iconData = ['AccountIcon', 'cart'];
@@ -10,7 +9,7 @@ function Home() {
 
   useEffect(() => {
     const icons = iconData.map((name) => {
-      const Icon = React.lazy(() => import(`../assets/icon/${name}`));
+      const Icon = React.lazy(() => import(`../assets/icons/${name}`));
       return Icon;
     });
     setIcons(icons);
@@ -27,7 +26,7 @@ function Home() {
     <>
       {/* <Carousel autostart />
       <Category /> */}
-      <Calculator />
+      {/* <Calculator /> */}
     </>
   );
 }

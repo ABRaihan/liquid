@@ -1,4 +1,4 @@
-import CloseIcon from '../../assets/icon/CloseIcon';
+import CloseIcon from '../../assets/icons/CloseIcon';
 
 export default {
   title: 'Icons',

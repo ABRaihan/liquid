@@ -1,9 +1,9 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import AccountIcon from '../../assets/icon/AccountIcon';
-import CartIcon from '../../assets/icon/CartIcon';
-import Hamburger from '../../assets/icon/Hamburger';
-import HomeIcon from '../../assets/icon/HomeIcon';
-import WishlistIcon from '../../assets/icon/WishlistIcon';
+import AccountIcon from '../../assets/icons/AccountIcon';
+import CartIcon from '../../assets/icons/CartIcon';
+import Hamburger from '../../assets/icons/HamburgerIcon';
+import HomeIcon from '../../assets/icons/HomeIcon';
+import WishlistIcon from '../../assets/icons/WishlistIcon';
 import style from '../../sass/components/layout/mobileMenu.module.scss';
 import classNames from '../../utils/classNames';
 

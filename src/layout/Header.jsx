@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 // Assents Files
-import Hamburger from '../assets/icon/Hamburger';
+import Hamburger from '../assets/icons/HamburgerIcon';
 import Logo from '../assets/images/Logo.png';
 import CategoryMenu from '../components/layout/CategoryMenu';
 // Components Files

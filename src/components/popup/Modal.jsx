@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import CloseIcon from '../../assets/icon/CloseIcon';
+import CloseIcon from '../../assets/icons/CloseIcon';
 import { DispatchContext } from '../../context/store/store';
 import style from '../../sass/components/popup/modal.module.scss';
 

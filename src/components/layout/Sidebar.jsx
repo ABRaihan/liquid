@@ -1,4 +1,4 @@
-import CloseIcon from '../../assets/icon/CloseIcon';
+import CloseIcon from '../../assets/icons/CloseIcon';
 import style from '../../sass/components/layout/sidebar.module.scss';
 import classNames from '../../utils/classNames';
 

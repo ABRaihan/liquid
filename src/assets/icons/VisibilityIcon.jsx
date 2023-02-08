@@ -46,7 +46,7 @@ const IconWrapper = styled.span`
   display: inline-block;
   overflow: hidden;
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     transition: all 0.3s;
     width: 20px;

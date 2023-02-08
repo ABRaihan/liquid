@@ -1,4 +1,4 @@
-import SearchIcon from '../../assets/icon/SearchIcon';
+import SearchIcon from '../../assets/icons/SearchIcon';
 import style from '../../sass/components/form/searchInput.module.scss';
 
 function SearchInput({ value, handleChange }) {

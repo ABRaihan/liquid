@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import EyeIcon from '../../assets/icon/VisibilityIcon';
+import EyeIcon from '../../assets/icons/VisibilityIcon';
 import style from '../../sass/components/form/input.module.scss';
 import classNames from '../../utils/classNames';
 import AuthErrorMessage from '../styled/ErrorMessage';

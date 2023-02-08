@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ChevronIcon from '../../assets/icon/ChevronIcon';
+import ChevronIcon from '../../assets/icons/ChevronIcon';
 import style from '../../sass/components/layout/breadcrumb.module.scss';
 import { isLastElement } from '../../utils/checkerFunc';
 
