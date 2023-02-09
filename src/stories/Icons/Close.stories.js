@@ -1,13 +1,13 @@
 import CloseIcon from '../../assets/icons/CloseIcon';
 
 export default {
-  title: 'Icons',
+  title: 'AtomComponent/Icons',
   component: CloseIcon,
 };
 
-const CloseTemplate = (args) => <CloseIcon {...args} />;
+// const CloseTemplate = (args) => <CloseIcon {...args} />;
 
-export const Close = CloseTemplate.bind({});
+export const Close = CloseIcon.bind({});
 
 Close.args = {
   width: 20,

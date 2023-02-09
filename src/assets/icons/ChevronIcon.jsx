@@ -7,12 +7,18 @@ const chevronDirections = {
   right: {
     transform: 'rotate(-90deg)',
   },
+  top: {
+    transform: 'rotate(180deg)',
+  },
+  bottom: {
+    transform: 'rotate(0deg)',
+  },
 };
 /**
  * Chevron Icon For Direction
  * @param {number} width - Number
  * @param {number} height - Number
- * @param {string|Array.<string>} direction - String|Array<String>
+ * @param {string} direction - ['left', 'right', 'top', 'bottom']
  * @callback onClick
  * @returns {JSX.Element}
  */
@@ -24,7 +30,7 @@ export default function ChevronIcon({ width, height, direction, onClick }) {
       height={height}
       viewBox="0 0 12 6.147"
       onClick={onClick}
-      style={chevronDirections[direction]}
+      style={{ transition: '0.5s all', ...chevronDirections[direction] }}
     >
       <path
         id="Arrow"
@@ -39,13 +45,12 @@ export default function ChevronIcon({ width, height, direction, onClick }) {
 ChevronIcon.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
-  // direction: PropTypes.oneOfType([PropTypes.oneOf(['left', 'right']), PropTypes.array]),
-  direction: PropTypes.oneOfType([PropTypes.string]),
+  direction: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),
   onClick: PropTypes.func,
 };
 ChevronIcon.defaultProps = {
   width: 12,
   height: 6.147,
-  direction: 'right',
+  direction: 'bottom',
   onClick: null,
 };
