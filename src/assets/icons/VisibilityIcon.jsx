@@ -3,9 +3,15 @@ import styled from 'styled-components';
 
 /**
  * Visible Icon For Password Visible In Input
+<<<<<<< HEAD
  * @param {boolean} visible
  * @callback onClick
  * @returns {JSX.Element}
+=======
+ * @param {boolean} visible - Boolean Value for visibility
+ * @callback onClick - Handler for change visibility
+ * @returns {JSX.Element} - VisibilityIcon component
+>>>>>>> 963b8f1ce219c1e84d50688162498b9c22779873
  */
 export default function VisibilityIcon({ visible, onClick }) {
   return (

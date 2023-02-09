@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
 
-function SearchIcon({ width, height }) {
+/**
+ *
+ * @param {number} width - number
+ * @param {number} height - number
+ * @returns {JSX.Element}
+ */
+export default function SearchIcon({ width, height }) {
   return (
     <svg width={width} height={height} viewBox="0 0 16 16" name="search">
       <path
@@ -13,7 +19,6 @@ function SearchIcon({ width, height }) {
   );
 }
 
-export default SearchIcon;
 SearchIcon.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
