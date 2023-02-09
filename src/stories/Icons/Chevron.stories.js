@@ -1,7 +1,7 @@
 import ChevronIcon from '../../assets/icons/ChevronIcon';
 
 export default {
-  title: 'Icons',
+  title: 'AtomComponents/Icons',
   component: ChevronIcon,
 };
 
@@ -12,5 +12,5 @@ export const Chevron = ChevronIcon.bind({});
 Chevron.args = {
   width: 16,
   height: 7,
-  direction: ['left', 'right'],
+  direction: 'bottom',
 };

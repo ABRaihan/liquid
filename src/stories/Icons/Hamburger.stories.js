@@ -1,7 +1,7 @@
 import HamburgerIcon from '../../assets/icons/HamburgerIcon';
 
 export default {
-  title: 'Icons',
+  title: 'AtomComponents/Icons',
   component: HamburgerIcon,
 };
 

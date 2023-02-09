@@ -1,13 +1,12 @@
 import VisibilityIcon from '../../assets/icons/VisibilityIcon';
 
 export default {
-  title: 'Icons',
+  title: 'AtomComponents/Icons',
   component: VisibilityIcon,
-  argTypes: { changeVisible: { action: 'changeVisible' } },
 };
 
-const VisibilityTemplate = (args) => <VisibilityIcon {...args} />;
-export const Visibility = VisibilityTemplate.bind({});
+// const VisibilityTemplate = (args) => <VisibilityIcon {...args} />;
+export const Visibility = VisibilityIcon.bind({});
 Visibility.args = {
   visible: false,
 };
