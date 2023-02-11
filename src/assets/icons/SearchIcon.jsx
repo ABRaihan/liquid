@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 
 /**
- *
  * @param {number} width - number
  * @param {number} height - number
- * @returns {JSX.Element}
+ * @returns {JSX.Element} JSX.Element
  */
 export default function SearchIcon({ width, height }) {
   return (

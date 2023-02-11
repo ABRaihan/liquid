@@ -2,20 +2,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
- * Visible Icon For Password Visible In Input
-<<<<<<< HEAD
- * @param {boolean} visible
- * @callback onClick
- * @returns {JSX.Element}
-=======
- * @param {boolean} visible - Boolean Value for visibility
- * @callback onClick - Handler for change visibility
- * @returns {JSX.Element} - VisibilityIcon component
->>>>>>> 963b8f1ce219c1e84d50688162498b9c22779873
+ * @param {boolean} visible - number
+ * @returns {JSX.Element} JSX.Element
  */
-export default function VisibilityIcon({ visible, onClick }) {
+export default function VisibilityIcon({ visible }) {
   return (
-    <IconWrapper onClick={onClick} visible={visible}>
+    <IconWrapper visible={visible}>
       <svg
         id="Show_Hide"
         data-name="Show/Hide"
@@ -64,7 +56,6 @@ const IconWrapper = styled.span`
 
 VisibilityIcon.propTypes = {
   visible: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
 };
 VisibilityIcon.defaultProps = {
   visible: false,

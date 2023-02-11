@@ -20,7 +20,6 @@ function Router() {
   return (
     <BrowserRouter>
       <Header />
-      {/* <Test /> */}
       {/* {!delay && ( */}
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,5 +1,7 @@
 @import "../utils/_mixins.scss";
+@import "../utils/_button.scss";
 .Hamburger {
+  @extend %common__button;
   position: relative;
   width: 20px;
   height: 15px;

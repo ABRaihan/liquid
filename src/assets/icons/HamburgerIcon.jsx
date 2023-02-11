@@ -5,22 +5,22 @@ import PropTypes from 'prop-types';
 import style from '../../sass/assets/hamburgerIcon.module.scss';
 import classNames from '../../utils/classNames';
 /**
- * hamburger icon for open & close menubar
- * @param {boolean} rotate
- * @callback onClick
- * @return {JSX.Element}
+ * @param {boolean} rotate - boolean
+ * @param {function} onClick - function
+ * @return {JSX.Element} JSX.Element
  */
 
 export default function HamburgerIcon({ rotate, onClick }) {
   return (
-    <div
+    <button
+      type="button"
       className={classNames(style.Hamburger, { [style.rotate]: rotate })}
       onClick={onClick}
     >
-      <div className={style.Hamburger__bar} />
-      <div className={style.Hamburger__bar} />
-      <div className={style.Hamburger__bar} />
-    </div>
+      <span className={style.Hamburger__bar} />
+      <span className={style.Hamburger__bar} />
+      <span className={style.Hamburger__bar} />
+    </button>
   );
 }
 HamburgerIcon.propTypes = {

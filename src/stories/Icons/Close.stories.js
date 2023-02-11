@@ -12,4 +12,5 @@ export const Close = CloseIcon.bind({});
 Close.args = {
   width: 20,
   height: 20,
+  color: '#1e272e',
 };

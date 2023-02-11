@@ -5,7 +5,7 @@ import { primaryColor, secondaryColor } from '../../components/styled/utils/vari
  * @param {number} width - number
  * @param {number} height - number
  * @param {boolean} inWishlist - boolean
- * @returns {JSX.Element}
+ * @returns {JSX.Element} JSX.Element
  */
 export default function WishlistIcon({ width, height, inWishlist }) {
   return (
