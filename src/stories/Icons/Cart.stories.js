@@ -1,7 +1,7 @@
 import CartIcon from '../../assets/icons/CartIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: CartIcon,
 };
 

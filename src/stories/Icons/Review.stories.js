@@ -1,7 +1,7 @@
 import ReviewIcon from '../../assets/icons/ReviewIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: ReviewIcon,
   argTypes: {
     review: {

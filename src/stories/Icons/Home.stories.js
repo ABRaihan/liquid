@@ -1,7 +1,7 @@
 import HomeIcon from '../../assets/icons/HomeIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: HomeIcon,
 };
 

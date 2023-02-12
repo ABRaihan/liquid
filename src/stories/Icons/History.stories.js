@@ -1,7 +1,7 @@
 import HistoryIcon from '../../assets/icons/HistoryIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: HistoryIcon,
 };
 

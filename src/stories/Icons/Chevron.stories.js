@@ -1,7 +1,7 @@
 import ChevronIcon from '../../assets/icons/ChevronIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: ChevronIcon,
 };
 

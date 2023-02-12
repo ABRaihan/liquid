@@ -1,7 +1,7 @@
 import SearchIcon from '../../assets/icons/SearchIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: SearchIcon,
 };
 

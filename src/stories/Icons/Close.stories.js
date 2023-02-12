@@ -1,7 +1,7 @@
 import CloseIcon from '../../assets/icons/CloseIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: CloseIcon,
 };
 

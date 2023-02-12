@@ -1,7 +1,7 @@
 import VisibilityIcon from '../../assets/icons/VisibilityIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: VisibilityIcon,
 };
 

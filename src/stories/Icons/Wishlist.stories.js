@@ -1,7 +1,7 @@
 import WishlistIcon from '../../assets/icons/WishlistIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: WishlistIcon,
 };
 

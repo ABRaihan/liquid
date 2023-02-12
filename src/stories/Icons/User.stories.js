@@ -1,7 +1,7 @@
 import UserIcon from '../../assets/icons/UserIcon';
 
 export default {
-  title: 'AtomComponent/Icons',
+  title: 'UI/Icons',
   component: UserIcon,
 };
 
