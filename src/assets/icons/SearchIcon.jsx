@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 /**
+ * @description Used to indicate user can search
  * @param {number} width - number
  * @param {number} height - number
  * @returns {JSX.Element} JSX.Element

@@ -1,3 +1,7 @@
+/**
+ * @description Used to indicate update information
+ * @returns {JSX.Element} SVG Icon
+ */
 export default function EditIcon() {
   return (
     <svg

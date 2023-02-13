@@ -15,15 +15,15 @@ const chevronDirections = {
   },
 };
 /**
+ * @description Used to indicate direction
  * @param {number} width - number
  * @param {number} height - number
  * @param {string} direction - enum['left', 'right', 'top', 'bottom']
- * @returns {JSX.Element}
+ * @returns {JSX.Element} SVG Icon
  */
 export default function ChevronIcon({ width, height, direction }) {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
       viewBox="0 0 12 6.147"

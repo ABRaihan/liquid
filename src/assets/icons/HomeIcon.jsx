@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 
 /**
+ * @description Used to indicate root or home
  * @param {number} width - number
  * @param {number} height - number
  * @param {string} color - string
- * @returns {JSX.Element} JSX.Element
+ * @returns {JSX.Element} SVG Icon
  */
 export default function HomeIcon({ width, height, color }) {
   return (

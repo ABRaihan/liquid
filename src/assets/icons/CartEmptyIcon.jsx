@@ -1,7 +1,10 @@
-export default function CartEmptyIcon({ width, height }) {
+/**
+ * @description Used to indicate cart is empty
+ * @returns {JSX.Element} SVG Icon
+ */
+export default function CartEmptyIcon() {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width="80"
       height="83.043"
       viewBox="0 0 80 83.043"

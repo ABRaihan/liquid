@@ -1,6 +1,7 @@
 /**
+ * @description Used for review
  * @param {number} review - number
- * @returns {JSX.Element} JSX.Element
+ * @returns {JSX.Element} SVG Icon
  */
 export default function ReviewIcon({ review }) {
   return (

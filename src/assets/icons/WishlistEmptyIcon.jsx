@@ -1,7 +1,10 @@
-export default function WishlistEmpty({ width, height }) {
+/**
+ * @description Used to indicate empty wishlist
+ * @returns {JSX.Element} SVG Icon
+ */
+export default function WishlistEmpty() {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width="81.24"
       height="74.264"
       viewBox="0 0 81.24 74.264"

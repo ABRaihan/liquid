@@ -1,12 +1,12 @@
 import { primaryColor } from '../../components/styled/utils/variables';
 
 /**
- * @returns {JSX.Element} JSX.Element
+ * @description Used to indicate recorded history
+ * @returns {JSX.Element} SVG Icon
  */
 export default function HistoryIcon() {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="15.98"
       viewBox="0 0 16 15.98"

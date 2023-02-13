@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { primaryColor, secondaryColor } from '../../components/styled/utils/variables';
 /**
- *
+ * @description Used for product wishlist
  * @param {number} width - number
  * @param {number} height - number
  * @param {boolean} inWishlist - boolean
- * @returns {JSX.Element} JSX.Element
+ * @returns {JSX.Element} SVG Icon
  */
 export default function WishlistIcon({ width, height, inWishlist }) {
   return (

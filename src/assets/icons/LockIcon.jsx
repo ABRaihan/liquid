@@ -1,9 +1,12 @@
 import { primaryColor } from '../../components/styled/utils/variables';
 
+/**
+ * @description Used to indicate privacy
+ * @returns {JSX.Element} SVG Icon
+ */
 export default function LockIcon() {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width="13.333"
       height="16"
       viewBox="0 0 13.333 16"

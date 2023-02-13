@@ -1,9 +1,12 @@
 import { primaryColor } from '../../components/styled/utils/variables';
 
+/**
+ * @description Used for media item
+ * @returns {JSX.Element} SVG Icon
+ */
 export default function PlayIcon() {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width="14.056"
       height="16.471"
       viewBox="0 0 14.056 16.471"

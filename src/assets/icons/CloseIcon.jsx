@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 
 /**
+ * @description Used to indicate close any view
  * @param {number} width - number
  * @param {number} height - number
  * @param {string} color - string
- * @returns {JSX.Element} JSX.Element
+ * @returns {JSX.Element} SVG Icon
  */
 export default function CloseIcon({ width, height, color }) {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
       viewBox="0 0 15 14.999"

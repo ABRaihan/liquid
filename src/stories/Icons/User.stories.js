@@ -10,5 +10,5 @@ export const User = UserIcon.bind({});
 User.args = {
   width: 22,
   height: 16.5,
-  fill: false,
+  active: false,
 };

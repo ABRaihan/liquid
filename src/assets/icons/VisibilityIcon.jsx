@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 /**
- * @param {boolean} visible - number
+ * @description Used in password show & hide
+ * @param {boolean} visible - boolean
  * @returns {JSX.Element} JSX.Element
  */
 export default function VisibilityIcon({ visible }) {
@@ -11,7 +12,6 @@ export default function VisibilityIcon({ visible }) {
       <svg
         id="Show_Hide"
         data-name="Show/Hide"
-        xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="14.657"
         viewBox="0 0 16 14.657"

@@ -1,8 +1,9 @@
 import PropTypes from 'process';
 
 /**
+ * @description Used to indicate office related information
  * @param {string} color - string
- * @returns {JSX.Element} JSX.Element
+ * @returns {JSX.Element} SVG Icon
  */
 export default function OfficeIcon({ color }) {
   return (

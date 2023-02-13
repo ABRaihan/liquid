@@ -10,5 +10,5 @@ export const Cart = CartIcon.bind({});
 Cart.args = {
   width: 19.509,
   height: 20,
-  inCart: false,
+  active: false,
 };

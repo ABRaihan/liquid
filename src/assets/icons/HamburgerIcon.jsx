@@ -5,9 +5,10 @@ import PropTypes from 'prop-types';
 import style from '../../sass/assets/hamburgerIcon.module.scss';
 import classNames from '../../utils/classNames';
 /**
+ * @description Used to indicate click & view menu
  * @param {boolean} rotate - boolean
  * @param {function} onClick - function
- * @return {JSX.Element} JSX.Element
+ * @return {JSX.Element} SVG Icon
  */
 
 export default function HamburgerIcon({ rotate, onClick }) {

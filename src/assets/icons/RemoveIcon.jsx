@@ -1,7 +1,10 @@
+/**
+ * @description Used to decrement product quantity
+ * @returns {JSX.Element} SVG Icon
+ */
 export default function RemoveIcon() {
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
       width="10"
       height="1.5"
       viewBox="0 0 10 1.5"

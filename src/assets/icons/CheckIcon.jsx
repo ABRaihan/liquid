@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 /**
+ * @description Used to indicate operation done
  * @param {number} width - number
  * @param {number} height - number
- * @returns {JSX.Element} JSX.Element
+ * @returns {JSX.Element} SVG Icon
  */
 export default function CheckIcon({ width, height }) {
   return (
