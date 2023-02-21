@@ -9,7 +9,7 @@ import useDelayUnmount from '../hooks/useDelayUnmount';
 import useScreenWidth from '../hooks/useScreenWidth';
 import style from '../sass/pages/items.module.scss';
 
-import Filter from '../tests/Filter';
+import Filter from '../testing/Filter';
 
 // breadcrumb paths
 const paths = [
